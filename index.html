@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aereomarine Exclusive | Elite Boats & Aircrafts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #c5a059;
+            --dark-bg: #0a0a0a;
+            --glass: rgba(255, 255, 255, 0.05);
+            --text-light: #e0e0e0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header ottimizzato per Mobile */
+        header {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&q=80&w=1920') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2rem, 8vw, 4rem); /* Font fluido */
+            letter-spacing: 3px;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .subtitle { 
+            font-size: clamp(0.8rem, 4vw, 1.2rem); 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+        }
+
+        section { 
+            padding: 60px 5%; 
+            max-width: 1200px; 
+            margin: auto; 
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 6vw, 2.5rem);
+            color: var(--gold);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* Grid Responsiva per la Storia */
+        .history-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* Default mobile: 1 colonna */
+            gap: 30px;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .history-grid { grid-template-columns: 1fr 1fr; }
+            section { padding: 80px 10%; }
+        }
+
+        .location-box {
+            background: var(--glass);
+            padding: 30px 20px;
+            border-radius: 15px;
+            border: 1px solid var(--gold);
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Form di Contatto */
+        .appointment-form {
+            background: var(--glass);
+            padding: 30px 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(197, 160, 89, 0.3);
+        }
+
+        .form-group { margin-bottom: 20px; }
+
+        label { display: block; margin-bottom: 8px; color: var(--gold); font-weight: 600; font-size: 0.9rem; }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            background: rgba(0,0,0,0.5);
+            border: 1px solid #444;
+            color: white;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem; /* Previene lo zoom automatico su iOS */
+        }
+
+        button {
+            width: 100%;
+            padding: 18px;
+            background: var(--gold);
+            color: black;
+            border: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: 0.3s;
+            letter-spacing: 1px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        button:active { transform: scale(0.98); }
+
+        footer { text-align: center; padding: 40px 20px; font-size: 0.8rem; color: #666; }
+
+        /* Immagini responsive */
+        img { max-width: 100%; height: auto; border-radius: 10px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>AEREOMARINE EXCLUSIVE</h1>
+        <p class="subtitle">Eccellenza in Mare e nel Cielo</p>
+    </header>
+
+    <section id="history">
+        <div class="history-grid">
+            <div>
+                <h2>La Nostra Storia</h2>
+                <p>Nata dalla passione per l'ingegneria d'élite, Aereomarine Exclusive seleziona solo i velivoli e le imbarcazioni che definiscono nuovi standard di lusso ed efficienza.</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1520437358207-323b43b50729?auto=format&fit=crop&q=80&w=600" alt="Lusso">
+        </div>
+    </section>
+
+    <section id="location">
+        <h2>Sede Operativa</h2>
+        <div class="location-box">
+            <h3>Terminal VIP</h3>
+            <p>Aeroporto Internazionale, Hangar 4.</p>
+            <p style="margin-top: 15px; color: var(--gold); font-size: 0.9rem;"><i>Privacy e accesso riservato garantiti.</i></p>
+        </div>
+    </section>
+
+    <section id="appointment">
+        <h2>Prenota Consulenza</h2>
+        <form id="webhookForm" class="appointment-form">
+            <div class="form-group">
+                <label>Nome Completo</label>
+                <input type="text" id="name" placeholder="Egr. Sig. Rossi" required>
+            </div>
+            <div class="form-group">
+                <label>Interessato a:</label>
+                <select id="interest">
+                    <option value="Jet Privato">Jet Privato</option>
+                    <option value="Yacht di Lusso">Yacht di Lusso</option>
+                    <option value="Consulenza Personalizzata">Consulenza Personalizzata</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Messaggio</label>
+                <textarea id="message" rows="4" placeholder="Dettagliate le vostre esigenze..."></textarea>
+            </div>
+            <button type="submit">Invia al Database</button>
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2026 AEREOMARINE EXCLUSIVE <br> Design & Efficienza.
+    </footer>
+
+    <script>
+        document.getElementById('webhookForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const webhookURL = "https://discord.com/api/webhooks/1462583409292349503/bSUxnf2xwtlLOivtuvkhIm7JPHsKpuSzOsAzN9J9eJnitvOw2lN2ZF-LDgmV0ePMlM6K";
+            
+            const payload = {
+                embeds: [{
+                    title: "🆕 Nuova Richiesta Appuntamento",
+                    color: 12951641,
+                    fields: [
+                        { name: "Cliente", value: document.getElementById('name').value, inline: true },
+                        { name: "Interesse", value: document.getElementById('interest').value, inline: true },
+                        { name: "Messaggio", value: document.getElementById('message').value || "Nessun messaggio" }
+                    ],
+                    timestamp: new Date()
+                }]
+            };
+
+            fetch(webhookURL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            }).then(() => {
+                alert("Richiesta inviata.");
+                document.getElementById('webhookForm').reset();
+            });
+        });
+    </script>
+</body>
+</html>
