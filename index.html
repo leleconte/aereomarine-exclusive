@@ -23,7 +23,6 @@
             overflow-x: hidden;
         }
 
-        /* Header ottimizzato per Mobile */
         header {
             height: 100vh;
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
@@ -39,7 +38,7 @@
 
         h1 {
             font-family: 'Cinzel', serif;
-            font-size: clamp(2rem, 8vw, 4rem); /* Font fluido */
+            font-size: clamp(2rem, 8vw, 4rem);
             letter-spacing: 3px;
             color: var(--gold);
             margin-bottom: 10px;
@@ -65,10 +64,49 @@
             text-align: center;
         }
 
-        /* Grid Responsiva per la Storia */
+        /* Liste Prezzi Professionali */
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--glass);
+            margin-bottom: 40px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid rgba(197, 160, 89, 0.2);
+        }
+
+        .price-table th, .price-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .price-table th {
+            background: rgba(197, 160, 89, 0.1);
+            color: var(--gold);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        .price-val {
+            color: var(--gold);
+            font-weight: 600;
+            text-align: right;
+        }
+
+        /* Coming Soon Section */
+        .coming-soon {
+            text-align: center;
+            padding: 40px;
+            border: 1px dashed var(--gold);
+            border-radius: 15px;
+            background: rgba(197, 160, 89, 0.03);
+        }
+
         .history-grid {
             display: grid;
-            grid-template-columns: 1fr; /* Default mobile: 1 colonna */
+            grid-template-columns: 1fr;
             gap: 30px;
             align-items: center;
         }
@@ -84,10 +122,8 @@
             border-radius: 15px;
             border: 1px solid var(--gold);
             text-align: center;
-            margin-top: 20px;
         }
 
-        /* Form di Contatto */
         .appointment-form {
             background: var(--glass);
             padding: 30px 20px;
@@ -97,7 +133,6 @@
         }
 
         .form-group { margin-bottom: 20px; }
-
         label { display: block; margin-bottom: 8px; color: var(--gold); font-weight: 600; font-size: 0.9rem; }
 
         input, select, textarea {
@@ -108,7 +143,7 @@
             color: white;
             border-radius: 8px;
             font-family: inherit;
-            font-size: 1rem; /* Previene lo zoom automatico su iOS */
+            font-size: 1rem;
         }
 
         button {
@@ -123,14 +158,9 @@
             transition: 0.3s;
             letter-spacing: 1px;
             border-radius: 8px;
-            margin-top: 10px;
         }
 
-        button:active { transform: scale(0.98); }
-
         footer { text-align: center; padding: 40px 20px; font-size: 0.8rem; color: #666; }
-
-        /* Immagini responsive */
         img { max-width: 100%; height: auto; border-radius: 10px; }
     </style>
 </head>
@@ -145,9 +175,60 @@
         <div class="history-grid">
             <div>
                 <h2>La Nostra Storia</h2>
-                <p>Nata dalla passione per l'ingegneria d'élite, Aereomarine Exclusive seleziona solo i velivoli e le imbarcazioni che definiscono nuovi standard di lusso ed efficienza.</p>
+                <p>Nata dalla passione per l'ingegneria d'élite, Aereomarine Exclusive seleziona solo i velivoli che definiscono nuovi standard di lusso ed efficienza. Dal 2004, serviamo la clientela più esigente direttamente dal nostro hub aeroportuale.</p>
             </div>
             <img src="https://images.unsplash.com/photo-1520437358207-323b43b50729?auto=format&fit=crop&q=80&w=600" alt="Lusso">
+        </div>
+    </section>
+
+    <section id="helicopters">
+        <h2>Listino Elicotteri</h2>
+        <table class="price-table">
+            <thead>
+                <tr><th>Modello</th><th style="text-align: right;">Prezzo</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Conada</td><td class="price-val">55.000$</td></tr>
+                <tr><td>Sea Sparrow</td><td class="price-val">75.500$</td></tr>
+                <tr><td>Havok</td><td class="price-val">62.000$</td></tr>
+                <tr><td>Volatus</td><td class="price-val">88.200$</td></tr>
+                <tr><td>Supervolito</td><td class="price-val">65.000$</td></tr>
+                <tr><td>Supervolito Carbon</td><td class="price-val">69.000$</td></tr>
+                <tr><td>Swift Deluxe</td><td class="price-val">95.000$</td></tr>
+                <tr><td>Swift</td><td class="price-val">74.000$</td></tr>
+                <tr><td>Frogger</td><td class="price-val">25.000$</td></tr>
+                <tr><td>Maverick</td><td class="price-val">47.000$</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="aircrafts">
+        <h2>Listino Velivoli</h2>
+        <table class="price-table">
+            <thead>
+                <tr><th>Modello</th><th style="text-align: right;">Prezzo</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Nimbus</td><td class="price-val">215.000$</td></tr>
+                <tr><td>Luxory Deluxe</td><td class="price-val">320.000$</td></tr>
+                <tr><td>MilJet</td><td class="price-val">252.000$</td></tr>
+                <tr><td>Shamal</td><td class="price-val">240.000$</td></tr>
+                <tr><td>Luxor</td><td class="price-val">295.000$</td></tr>
+                <tr><td>Velum (5 posti)</td><td class="price-val">137.000$</td></tr>
+                <tr><td>Velum</td><td class="price-val">125.000$</td></tr>
+                <tr><td>Dodo</td><td class="price-val">98.000$</td></tr>
+                <tr><td>Vestra</td><td class="price-val">115.000$</td></tr>
+                <tr><td>Duster</td><td class="price-val">83.500$</td></tr>
+                <tr><td>Mammatus</td><td class="price-val">130.000$</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="boats">
+        <h2>Imbarcazioni</h2>
+        <div class="coming-soon">
+            <h3 style="color: var(--gold); font-family: 'Cinzel'; margin-bottom: 10px;">COMING SOON</h3>
+            <p>Stiamo selezionando la migliore flotta marittima per voi. Restate sintonizzati.</p>
         </div>
     </section>
 
@@ -168,12 +249,8 @@
                 <input type="text" id="name" placeholder="Egr. Sig. Rossi" required>
             </div>
             <div class="form-group">
-                <label>Interessato a:</label>
-                <select id="interest">
-                    <option value="Jet Privato">Jet Privato</option>
-                    <option value="Yacht di Lusso">Yacht di Lusso</option>
-                    <option value="Consulenza Personalizzata">Consulenza Personalizzata</option>
-                </select>
+                <label>Modello di Interesse</label>
+                <input type="text" id="interest" placeholder="Es: Swift Deluxe o Nimbus" required>
             </div>
             <div class="form-group">
                 <label>Messaggio</label>
@@ -194,13 +271,14 @@
             
             const payload = {
                 embeds: [{
-                    title: "🆕 Nuova Richiesta Appuntamento",
+                    title: "✈️ NUOVA RICHIESTA AEREOMARINE",
                     color: 12951641,
                     fields: [
-                        { name: "Cliente", value: document.getElementById('name').value, inline: true },
-                        { name: "Interesse", value: document.getElementById('interest').value, inline: true },
-                        { name: "Messaggio", value: document.getElementById('message').value || "Nessun messaggio" }
+                        { name: "👤 Cliente", value: document.getElementById('name').value, inline: true },
+                        { name: "🚁 Interesse", value: document.getElementById('interest').value, inline: true },
+                        { name: "📝 Messaggio", value: document.getElementById('message').value || "Nessun messaggio" }
                     ],
+                    footer: { text: "Aereomarine Exclusive CRM" },
                     timestamp: new Date()
                 }]
             };
@@ -210,8 +288,10 @@
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload)
             }).then(() => {
-                alert("Richiesta inviata.");
+                alert("Richiesta inviata con successo.");
                 document.getElementById('webhookForm').reset();
+            }).catch(() => {
+                alert("Errore nell'invio.");
             });
         });
     </script>
