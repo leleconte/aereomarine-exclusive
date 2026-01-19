@@ -93,15 +93,7 @@
             color: var(--gold);
             font-weight: 600;
             text-align: right;
-        }
-
-        /* Coming Soon Section */
-        .coming-soon {
-            text-align: center;
-            padding: 40px;
-            border: 1px dashed var(--gold);
-            border-radius: 15px;
-            background: rgba(197, 160, 89, 0.03);
+            white-space: nowrap;
         }
 
         .history-grid {
@@ -225,11 +217,24 @@
     </section>
 
     <section id="boats">
-        <h2>Imbarcazioni</h2>
-        <div class="coming-soon">
-            <h3 style="color: var(--gold); font-family: 'Cinzel'; margin-bottom: 10px;">COMING SOON</h3>
-            <p>Stiamo selezionando la migliore flotta marittima per voi. Restate sintonizzati.</p>
-        </div>
+        <h2>Listino Imbarcazioni</h2>
+        <table class="price-table">
+            <thead>
+                <tr><th>Modello</th><th style="text-align: right;">Prezzo</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Marquis (Barca a vela - 4 posti)</td><td class="price-val">26.000$</td></tr>
+                <tr><td>Jetmax (Speedboat - 2 posti)</td><td class="price-val">10.000$</td></tr>
+                <tr><td>Shitzu Squalo</td><td class="price-val">21.000$</td></tr>
+                <tr><td>Speedboat Elegante (4 posti)</td><td class="price-val">50.000$</td></tr>
+                <tr><td>Suntrap (Barca piccola economica)</td><td class="price-val">11.250$</td></tr>
+                <tr><td>Tropic (Speedboat economica - 4 posti)</td><td class="price-val">10.340$</td></tr>
+                <tr><td>Seashark (Jet ski - 2 posti)</td><td class="price-val">5.950$</td></tr>
+                <tr><td>Speeder (Classic speedboat - 4 posti)</td><td class="price-val">47.450$</td></tr>
+                <tr><td>Lampadati Toro (Lusso)</td><td class="price-val">176.000$</td></tr>
+                <tr><td>Dinghy</td><td class="price-val">11.100$</td></tr>
+            </tbody>
+        </table>
     </section>
 
     <section id="location">
@@ -250,7 +255,7 @@
             </div>
             <div class="form-group">
                 <label>Modello di Interesse</label>
-                <input type="text" id="interest" placeholder="Es: Swift Deluxe o Nimbus" required>
+                <input type="text" id="interest" placeholder="Es: Swift Deluxe, Nimbus o Lampadati Toro" required>
             </div>
             <div class="form-group">
                 <label>Messaggio</label>
